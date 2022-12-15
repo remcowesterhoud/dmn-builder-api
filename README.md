@@ -1,3 +1,58 @@
+# DMN Builder API
+
+```
+DMN.createDRG(<id>)
+	.decision(<id>, <decisionConsumer>) (1-* times)
+	.requires(<id>)
+	.done()
+```
+
+
+**decisionConsumer** (DecisionBuilder):
+```
+builder
+	.literalExpression(<expression>)
+	.variableName(<name>)
+	.variableType(<type>)
+
+option 1:
+builder
+	.decisionTable()
+		.input(<expression>, <type>) (1-* times)
+			.value(<expression>) (0-* times)
+		.input(<expression>, <type>) (1-* times)
+			.value(<expression>) (0-* times)
+		.output(<name>, <type>) (1-* times)
+			.value(<expression>) (0-* times)
+.hitPolicy(<HitPolicy Enum>)
+
+option 2:
+builder
+	.decisionTable()
+		.input(<expression>, <type>) (1-* times)
+		.input(<expression>, <type>) (1-* times)
+		.output(<name>, <type>) (1-* times)
+		.row()
+    .inputs(<inputs>)
+    .outputs(<outputs>)
+.hitPolicy(<HitPolicy Enum>)
+```
+
+
+-------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
 [![Community badge: Incubating](https://img.shields.io/badge/Lifecycle-Incubating-blue)](https://github.com/Camunda-Community-Hub/community/blob/main/extension-lifecycle.md#incubating-)
 [![Community extension badge](https://img.shields.io/badge/Community%20Extension-An%20open%20source%20community%20maintained%20project-FF4700)](https://github.com/camunda-community-hub/community)
 
