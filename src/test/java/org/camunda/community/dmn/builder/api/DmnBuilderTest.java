@@ -20,11 +20,12 @@ class DmnBuilderTest {
                 "decision2",
                 d ->
                     d.decisionTable(
-                        HitPolicy.UNIQUE,
-                        b ->
-                            b.input("input", VariableType.STRING)
-                                .output("output", VariableType.STRING)
-                                .rule("foo", "bar")))
+                            HitPolicy.UNIQUE,
+                            b ->
+                                b.input("input", VariableType.STRING)
+                                    .output("output", VariableType.STRING)
+                                    .rule("foo", "bar"))
+                        .requires("decision1"))
             .done();
     System.out.println(Dmn.convertToString(drg));
   }
