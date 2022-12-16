@@ -4,12 +4,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.camunda.community.extension.name</groupId>
-  <artifactId>give-me-a-name</artifactId>
+  <groupId>org.camunda.community.extension.dmn.builder.api</groupId>
+  <artifactId>dmn-builder-api</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>give-me-a-name</name>
+  <name>dmn-builder-api</name>
 
   <scm>
     <url>https://github.com/camunda-community-hub/maven-template</url>
@@ -28,7 +28,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <version.java>11</version.java>
+    <version.java>17</version.java>
     <maven.version>3.0</maven.version>
   </properties>
 
