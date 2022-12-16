@@ -28,7 +28,7 @@ public class DrgBuilder {
   public DrgBuilder decision(final String id, final Consumer<DecisionBuilder> consumer) {
     final Decision decision = createChild(Decision.class, id);
     definitions.addChildElement(decision);
-    final var decisionBuilder = new DecisionBuilder(decision);
+    final var decisionBuilder = new DecisionBuilder(decision, modelInstance);
     consumer.accept(decisionBuilder);
     return this;
   }
